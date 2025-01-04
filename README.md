@@ -12,8 +12,20 @@ You will need to set up your environment first to run this project with Sail. Th
 
 You will need to do the following steps to get this project up and running:
 * Clone the project to a local directory.
-* Use the command `./vendor/bin/sail up` in a terminal to get the project up and running.
-* Use the command `./vendor/bin/sail artisan migrate` in a terminal to build the tables of the database.
+
+* Use the following command inside the directory to install the dependencies of the project:
+```
+  docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php84-composer:latest \
+    composer install --ignore-platform-reqs
+  ```
+See [Laravel Sail - Installing Composer dependencies for existing projects](https://laravel.com/docs/11.x/sail#installing-composer-dependencies-for-existing-projects).
+
+* Use the command `./vendor/bin/sail up` in the directory to get the project up and running.
+* Use the command `./vendor/bin/sail artisan migrate` in the directory to build the tables of the database.
 
 ## Which commands were used to create the files?
 
