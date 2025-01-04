@@ -8,6 +8,8 @@ There are no students in the database, so the web page and call will be empty, a
 
 ## How do I run this project?
 
+You will need to set up your environment first to run this project with Sail. The [HOWTO: Build a Laravel project with Sail](https://github.com/DC-AO-CR/laravel_build_project) instructs you on how to set up your environment with the right tools and to set up a new Laravel project in a Docker container.
+
 You will need to do the following steps to get this project up and running:
 * Clone the project to a local directory.
 * Use the command `./vendor/bin/sail up` in a terminal to get the project up and running.
