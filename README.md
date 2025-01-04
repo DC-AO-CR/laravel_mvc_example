@@ -1,8 +1,8 @@
-# Laraval MVC example
+# Laravel MVC example
 
 This is a simple example of using the MVC framework in Laravel.
 
-The project show a list of students through a web page () or through a RESTful JSON call ().
+The project show a list of students through a web page (http://localhost/overview) or through a RESTful JSON call (http://localhost/students).
 
 There are no students in the database, so the web page and call will be empty, and you'll have to add the students first by hand through a database management tool.
 
@@ -25,7 +25,7 @@ We can generate a `migration` with the Artisan console through the Sail containe
 
 `./vendor/bin/sail artisan make:migration create_student_table`
 
-This command created the following file: ``.
+This command created the following file: [database/2024_11_13_134137_create_student_table.php](database/migrations/2024_11_13_134137_create_student_table.php).
 
 ### How can we generate the Student model?
 
@@ -33,7 +33,7 @@ We can generate a `model` with the Artisan console through the Sail container.
 
 * `./vendor/bin/sail artisan make:model Student`
 
-This command created the following file: ``.
+This command created the following file: [app/Models/Student.php](/app/Models/Student.php).
 
 ### How can we generate the Student controller?
 
@@ -41,13 +41,13 @@ We can generate a `controller` with the Artisan console through the Sail contain
 
 `./vendor/bin/sail artisan make:controller StudentController`
 
-This created the following file file: ``.
+This created the following file file: [app/Http/Controllers/StudentController.php](app/Http/Controllers/StudentController.php).
 
 ### How can we add a GET route to the method in the controller?
 
-We put a route in the `web.api` to be reachable by an URL in the web app.
+We put a route in the `web` to be reachable by an URL in the web app.
 
-We added the GET route in the following file:
+We added the GET route in the following file: [routes/web.php](routes/web.php)
 
 ### How can we generate the Student view?
 
@@ -55,4 +55,4 @@ We can generate a `view` with the Artisan console through the Sail container.
 
 * `./vendor/bin/sail artisan make:view overview`
 
-This created the following file file: ``.
+This created the following file file: [resources/views/overview.blade.php](resources/views/overview.blade.php).
