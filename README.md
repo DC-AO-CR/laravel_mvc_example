@@ -11,7 +11,7 @@ There are no students in the database, so the web page and call will be empty, a
 You will need to do the following steps to get this project up and running:
 * Clone the project to a local directory.
 * Use the command `./vendor/bin/sail up` in a terminal to get the project up and running.
-* Use the command `./vendor/bin/sail` artisan migrate' in a terminal to build the tables of the database.
+* Use the command `./vendor/bin/sail artisan migrate` in a terminal to build the tables of the database.
 
 ## Which commands were used to create the files?
 
